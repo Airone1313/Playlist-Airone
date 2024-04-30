@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist Airone</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/js/app.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <h1 id="page-title">Choisissez votre Musique !</h1>
+    <div class="container">
+      <div class="playlist-container">
+        <ul id="playlist">
+          <!-- Loop js dynamique -->
+        </ul>
+        <div class="button-container">
+          <button id="aleatoire">
+              <img src="assets/pictures/logoAle.png" alt="Logo" class="button-logo">
+              écoute aléatoire
+          </button>
+      </div>
+      
+      </div>
+
+      <div class="vinyle-container">
+        <div class="disque pause" id="disque">
+          <img class="vinyle pause" id="vinyle" src="assets/pictures/disqueur.png" alt="Disque Vinyle">
+          <img class="cover pause" id="cover" src="assets/pictures/smiley.png" alt="smiley">
+        </div>
+      </div>
+    </div>
+
+    <div class="lecteur-container">
+      <audio class="lecteur" controls src=""></audio>
+      <div class="lyrics-container">
+          <button id="toggle-lyrics">Afficher les paroles</button>
+          <div id="lyrics" style="display: none;"></div>
+      </div>
+  </div>
+  
+  
+  </body>
+</html>
+
+    <!-- Ajoutez des boutons ou des menus déroulants pour les options de tri -->
+    <!--
+    <div class="sorting-options">
+      <label for="sort-select">Trier par :</label>
+      <select id="sort-select">
+        <option value="title">Titre</option>
+        <option value="category">Catégorie</option>
+      </select>
+    </div>
+    -->

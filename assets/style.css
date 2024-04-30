@@ -1,0 +1,219 @@
+@keyframes turnAround {
+    0% {
+        transform: rotate(0deg) /*scale(0.75)*/;
+    }
+
+    50% {
+        transform: rotate(180deg) /*scale(1)*/;
+    }
+
+    100% {
+        transform: rotate(360deg) /*scale(0.75)*/;
+    }
+}
+
+@keyframes turnVinyl {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rainbow {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 200% 0; 
+    }
+}
+
+/* Réinitialisation de la marge et du rembourrage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cover {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.vinyle {
+    width: 350px;
+    height: 350px;
+}
+
+.disque {
+    position: relative;
+    display: inline-block;
+    animation: turnAround 8s infinite linear;
+}
+
+.pause{
+    animation-play-state: paused;
+}
+
+#aleatoire {
+    margin-top: 20px; /* Espacement par rapport au lecteur audio */
+    background-color: #00b11dbd; /* Couleur de fond */
+    border: none;
+    color: #2a4f9fe0; /* Couleur du texte */
+    padding: 10px 30px; /* Espacement interne */
+    font-size: 16px;
+    border-radius: 15px; /* Bords arrondis */
+    cursor: pointer;
+    transition: background-color 0.5s ease; /* Transition en cas de survol */
+}
+
+#aleatoire:hover {
+    background-color: #00ef0c; /*  Nouvelle couleur de fond au survol  */
+}
+
+/* Style pour le conteneur principal */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start; /* Alignement en haut */
+    padding: 130px;
+}
+
+/* Style pour le conteneur de la playlist */
+.playlist-container {
+    width: 75%; /* Ajustez la largeur selon vos préférences */
+}
+
+/* Style pour le conteneur du vinyle */
+.vinyle-container {
+    width: 100%; /* Ajustez la largeur selon vos préférences */
+    text-align: center;
+}
+
+/* Style pour le lecteur audio */
+#audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Style pour la liste de lecture */
+#playlist {
+    list-style: none;
+    padding: 0;
+}
+
+#playlist li {
+    padding: 20px;
+    margin-bottom: 5px;
+    background-color: #e0f147;
+    color: #000000e0; 
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.35s ease;
+}
+
+#playlist li:hover {
+    background-color: #99a262; /* Changement de couleur au survol */
+}
+
+#playlist li h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#playlist li div small {
+    font-size: 15px;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    background-image: linear-gradient(to bottom, rgba(255,128,255,0.5), rgba(0,0,128,0.5));
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Verdana', sans-serif;
+}
+
+#page-title {
+    text-align: center; /* Centrer le texte horizontalement */
+    margin-top: 20px; /* Espacement au-dessus du titre */
+    margin-bottom: 20px; /* Espacement en dessous du titre */
+    font-size: 24px; /* Taille de la police */
+    color: rgb(255, 255, 255); /* Couleur du texte */
+    background: linear-gradient(to right, #0e37ee, #002fff, #9900ff, #7300ff, #3300ff, #020082, #0e37ee); 
+    background-size: 200% auto; 
+    animation: rainbow 6s linear infinite;
+    }
+
+
+
+.lecteur {
+    width: 40%;
+    text-align: right;
+    outline: none; /* Supprime le contour par défaut lors de la sélection */
+    border-radius: 6px; /* Bords arrondis */
+    
+    transition: box-shadow 0.3s ease; /* Transition douce pour l'ombre */
+    /*background-color: #2a0f74;*/
+}
+
+/* Style pour le lecteur audio */
+.lecteur-container {
+    margin-top: 3px;
+    text-align: center;
+    border-radius: 0; /* Supprime l'arrondi */
+}
+
+.lyrics-container {
+    margin-right: 20px; /* Ajoute de l'espace entre le conteneur de paroles et le lecteur audio */
+    
+}
+
+/* Style pour le bouton "écoute " */
+.button-container {
+    width: 300%;
+    padding: 12px;
+    margin-left: 220px;
+}
+.button-logo {
+    vertical-align: middle; /* Alignement vertical avec le texte */
+    width: 2em;             /* Largeur similaire à celle d'une lettre */
+    height: auto;           /* Hauteur ajustée automatiquement */
+}
+
+#lyrics {
+    background-color: #f8f9fa; /* Couleur de fond légère pour les paroles */
+    color: #343a40; /* Couleur de texte sombre pour un bon contraste */
+    padding: 28px; /* Espace interne pour ne pas coller au bord du conteneur */
+    border-radius: 8px; /* Bords arrondis pour un look moderne */
+    margin: 30px 0; /* Marge au-dessus et en dessous du conteneur pour le séparer des autres éléments */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Ombre subtile pour un effet de profondeur */
+    font-family: 'Arial', sans-serif; /* Police de caractères pour les paroles */
+    font-size: 16px; 
+    line-height: 1.5; /* Hauteur de ligne pour une lecture confortable */
+    overflow-y: auto; /* Permet le défilement vertical si le texte est trop long */
+    max-height: 500px; /* Hauteur maximale avant que le défilement ne devienne nécessaire */
+    word-wrap: break-word; /* Assure que les mots longs ne débordent pas du conteneur */
+    
+}
+
+#lyrics p {
+    margin: 0;
+    padding: 0.5em 0; /* Ajoute un peu d'espacement vertical autour des paragraphes */
+    white-space: pre-wrap; /* Garde la mise en forme des espaces et des retours à la ligne */
+}
+
+
+
+#lyrics.is-visible {
+    display: block; /* Quand 'is-visible' est ajouté, les paroles sont montrées */
+}

@@ -1,0 +1,38 @@
+[
+    {
+      "id": 1,
+      "cover": "ds3.png",
+      "sound": "musique1.mp3",
+      "title": "Dark Souls 3",
+      "date":  "2016",
+      "lyricsFile": "./assets/paroles/DS3.txt"
+     
+    },
+    {
+      "id": 2,
+      "cover": "7jaws.png",
+      "sound": "musique2JAWS.mp3",
+      "title": "Jusqu'a la fin",
+      "date":  "2021",
+      "lyricsFile": "./assets/paroles/jusqualafin.txt"
+    },
+    {
+      "id": 3,
+      "cover": "kronojul.png",
+      "sound": "musique3JUL.mp3",
+      "title": "Allez les bleus",
+      "date":  "2022",
+      "lyricsFile": "./assets/paroles/Kronojul.txt"
+  
+    },
+    {
+      "id": 4,
+      "cover": "grilJWA.png",
+      "sound": "musique4.mp3",
+      "title": "Gril just want to have fun",
+      "date": "1983",
+      "lyricsFile": "./assets/paroles/girl.txt"
+
+    }
+    
+]
