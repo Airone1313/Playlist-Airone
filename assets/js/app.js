@@ -14,7 +14,7 @@ const config = {
 // Fonction asynchrone pour récupérer et afficher les données des musiques
 const getData = async () => {
     try {
-        const response = await fetch("./assets/js/data.json");
+        const response = await fetch("https://api-main-uekb.onrender.com/api/v1/musics");
         if (!response.ok) {
             throw new Error(`Failed to fetch: ${response.status}`);
         }
